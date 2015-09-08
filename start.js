@@ -22,8 +22,15 @@ app.post('/:bucket/:event', function (req, res) {
 		return res.sendStatus(400);
 	}
 
+	// If the request includes a "Date" header, use it
+	var date = new Date(req.get('date'));
+	if (isNaN(+date)) {
+		// ...but only if it's a valid date
+		date = void 0;
+	}
+
 	// send an event to Initial State
-	buckets.get(req.params.bucket).push(req.params.event, req.body || '');
+	buckets.get(req.params.bucket).push(req.params.event, req.body || '', date);
 
 	// send back a successful response (HTTP 204 = It worked, that is all.)
 	res.status(204).end();
