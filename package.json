@@ -1,0 +1,35 @@
+{
+  "name": "node-hub",
+  "version": "0.1.0",
+  "description": "Personal IoT hub for securely relaying data to Initial State",
+  "main": "server.js",
+  "readme": "Personal IoT hub for securely relaying data to Initial State",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adametry/node-hub.git"
+  },
+  "keywords": [
+    "IoT",
+    "Hub",
+    "Security",
+    "Raspberry Pi",
+    "Initial State"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adametry/node-hub/issues"
+  },
+  "homepage": "https://github.com/adametry/node-hub#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "initial-state": "^0.1.0"
+  },
+  "engines": {
+    "node": "^0.12.0"
+  }
+}
