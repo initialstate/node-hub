@@ -1,18 +1,11 @@
 
 var buckets = require('./buckets');
-var express = require('express');
 var bodyParser = require('body-parser');
+var express = require('express');
 var app = express();
 
 // read the body of any content type as utf-8 text
 app.use(bodyParser.text({ type: '*/*' }));
-
-// A simple response from the hub
-app.get('/', function (req, res) {
-
-	res.send('Hello.');
-
-});
 
 // Relay event data, securely, to Initial State
 app.post('/:bucket/:event', function (req, res) {
@@ -37,7 +30,15 @@ app.post('/:bucket/:event', function (req, res) {
 
 });
 
-app.listen(80, function () {
+// Show README.md as a homepage
+app.engine('md', require('./md-view'));
+app.set('views', __dirname);
+app.set('view engine', 'md');
+app.get('/', function (req, res, next) {
+	res.render('README');
+});
+
+app.listen(8080, function () {
 
 	console.log('Node-hub serving on port', this.address().port);
 

@@ -27,7 +27,8 @@
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "initial-state": "^0.1.0"
+    "initial-state": "^0.1.0",
+    "markdown-it": "^4.4.0"
   },
   "engines": {
     "node": "^0.12.0"
