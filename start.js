@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 
 // read the body of any content type as utf-8 text
-app.use(bodyParser.text({ type: '*/*' }));
+app.use(bodyParser.text({ type: function () { return true; } }));
 
 // Relay event data, securely, to Initial State
 app.post('/:bucket/:event', function (req, res) {
