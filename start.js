@@ -27,7 +27,7 @@ app.post('/:bucket/:event', function (req, res) {
 
 	// send back a successful response (HTTP 204 = It worked, that is all.)
 	res.status(204).end();
-    console.log(req.params.event, req.body);
+
 });
 
 // Show README.md as a homepage
