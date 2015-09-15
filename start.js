@@ -38,7 +38,7 @@ app.get('/', function (req, res, next) {
 	res.render('README');
 });
 
-app.listen(8080, function () {
+app.listen(process.env.IS_HUB_PORT || 80, function () {
 
 	console.log('Node-hub serving on port', this.address().port);
 
