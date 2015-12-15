@@ -15,7 +15,7 @@ if [ $? -eq 1 ]; then
     echo "Installing NVM"
 
     # install NVM
-    curl -s https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+    bash <(curl -s https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh)
 
     # initialize nvm
     export NVM_DIR=$(echo ~/.nvm)
