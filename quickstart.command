@@ -1,14 +1,15 @@
 #!/bin/sh
 
-# This script may need execution permission before an initial run
-# chmod +x quickstart.command
+# This script may need execution permission before an initial run:
+# > chmod +x quickstart.command
+# Alternatively, this can be installed remotely with:
+# > curl -s https://raw.githubusercontent.com/InitialState/node-hub/master/quickstart.command | sh -s 8080 abcdef
 
 # SETUP
 
 # ensure that node is installed
 if hash node 2>/dev/null; then
   echo "Node.js Pre-Installed"
-  hash node 2> echo
 
 else
   echo "Node.js Not Found"
