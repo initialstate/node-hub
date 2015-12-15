@@ -1,30 +1,31 @@
 #!/bin/sh
 
-# This script may need execution permission before an initial run:
-# > chmod +x quickstart.command
-# Alternatively, this can be installed remotely with:
-# > curl -s https://raw.githubusercontent.com/InitialState/node-hub/master/quickstart.command | sh -s 8080 abcdef
+# To use the remote install script, run:
+# > curl -s https://raw.githubusercontent.com/InitialState/node-hub/master/quickstart.command | sh -s 8080 my_access_key
+# If your environment already has node installed, you can clone this repo and run `npm start -- 8080 my_access_key`
 
 # SETUP
 
 echo "Beginning node-hub quick start!"
-echo "                                  _________       "
-echo "                               NN           NN    "
-echo "                             N                 N  "
-echo "                            N      NNNNNNN      N "
-echo "                          N      NN       N      N"
-echo "NNNNNNN                  N      N          N     N"
-echo "N     N                 N      N           N     N"
-echo "N     N               N       N            N     N"
-echo "                                                  "
-echo "NNNN NN            NNNNNNNN                NNNNNNN"
-echo "N     N           N      N                 N     N"
-echo "N     N          N      N                  N     N"
-echo "N      N       NN      N                   NNNNNNN"
-echo " N      NNNNNNN      N                            "
-echo "  N                 N                             "
-echo "    NN           NN                               "
-echo "       ---------                                  "
+echo "                                                    "
+echo "                                   •••••••••        "
+echo "                                •••••••••••••••     "
+echo "                              •••••••••••••••••••   "
+echo "                             •••••••••••••••••••••  "
+echo " •••••••                   •••••••••       •••••••• "
+echo " •••••••                  ••••••••          ••••••• "
+echo " •••••••                 ••••••••           ••••••• "
+echo " •••••••               •••••••••            ••••••• "
+echo "                                                    "
+echo " •••••••            ••••••••                ••••••• "
+echo " •••••••           ••••••••                 ••••••• "
+echo " •••••••          ••••••••                  ••••••• "
+echo " ••••••••       •••••••••                   ••••••• "
+echo "  •••••••••••••••••••••                             "
+echo "   •••••••••••••••••••                              "
+echo "     •••••••••••••••                                "
+echo "        •••••••••                                   "
+echo "                                                    "
 
 # ensure that node is installed
 if hash node 2>/dev/null; then
