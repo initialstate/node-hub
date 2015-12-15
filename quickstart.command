@@ -8,6 +8,7 @@
 # ensure that node is installed
 if hash node 2>/dev/null; then
   echo "Node.js Pre-Installed"
+  hash node 2> echo
 
 else
   echo "Node.js Not Found"
