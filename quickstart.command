@@ -20,9 +20,7 @@ else
     echo "Installing NVM"
 
     # install NVM
-    script=$(curl -s https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh)
-    echo "NVM Script: $script"
-    echo "$script" | sh
+    curl -s https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 
     # initialize nvm
     export NVM_DIR=$(echo ~/.nvm)
