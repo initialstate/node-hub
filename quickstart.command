@@ -15,17 +15,20 @@ if [ $? -eq 1 ]; then
     echo "Installing NVM"
 
     # install NVM
-    curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+    curl -s https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
 
     # initialize nvm
     export NVM_DIR=$(echo ~/.nvm)
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+    echo "NVM Installed (NVM_DIR: $NVM_DIR)"
   fi;
 
   echo "Installing Node"
   # install Node
   nvm install v5
 
+  echo "Node Installed"
 fi;
 
 # ensure that the node-hub repo is available
