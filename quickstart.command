@@ -7,6 +7,25 @@
 
 # SETUP
 
+echo "Beginning node-hub quick start!"
+echo "                                  _________       "
+echo "                               NN           NN    "
+echo "                             N                 N  "
+echo "                            N      NNNNNNN      N "
+echo "                          N      NN       N      N"
+echo "NNNNNNN                  N      N          N     N"
+echo "N     N                 N      N           N     N"
+echo "N     N               N       N            N     N"
+echo "                                                  "
+echo "NNNN NN            NNNNNNNN                NNNNNNN"
+echo "N     N           N      N                 N     N"
+echo "N     N          N      N                  N     N"
+echo "N      N       NN      N                   NNNNNNN"
+echo " N      NNNNNNN      N                            "
+echo "  N                 N                             "
+echo "    NN           NN                               "
+echo "       ---------                                  "
+
 # ensure that node is installed
 if hash node 2>/dev/null; then
   echo "Node.js Pre-Installed"
