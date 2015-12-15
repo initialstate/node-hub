@@ -6,12 +6,16 @@
 # SETUP
 
 # ensure that node is installed
-hash node &> /dev/null
-if [ $? -eq 1 ]; then
-  echo "Node Not Installed"
+if hash node 2>/dev/null; then
+  echo "Node.js Pre-Installed"
 
-  hash nvm &> /dev/null
-  if [ $? -eq 1 ]; then
+else
+  echo "Node.js Not Found"
+
+  if hash nvm 2>/dev/null; then
+    echo "NVM Pre-Installed"
+
+  else
     echo "Installing NVM"
 
     # install NVM
@@ -26,15 +30,11 @@ if [ $? -eq 1 ]; then
     echo "NVM Installed (NVM_DIR: $NVM_DIR)"
   fi;
 
-  echo "Installing Node"
+  echo "Installing Node.js"
   # install Node
   nvm install v5
 
-  echo "Node Installed"
-
-else
-  echo "Node Pre-Installed"
-
+  echo "Node.js Installed"
 fi;
 
 # ensure that the node-hub repo is available
