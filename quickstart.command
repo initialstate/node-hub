@@ -45,4 +45,4 @@ export IS_API_ACCESS_KEY="place_access_key_here"
 npm install
 
 # START HUB
-npm start
+npm start -- $1 $2
