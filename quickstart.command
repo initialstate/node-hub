@@ -31,6 +31,10 @@ if [ $? -eq 1 ]; then
   nvm install v5
 
   echo "Node Installed"
+
+else
+  echo "Node Pre-Installed"
+
 fi;
 
 # ensure that the node-hub repo is available
